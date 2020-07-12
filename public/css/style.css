@@ -1,0 +1,228 @@
+:root {
+  --deep-cove: #130f40;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+p {
+  margin: 1rem 0 !important;
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+table {
+  color: var(--deep-cove);
+  font-size: 2rem;
+}
+
+/* Reusable Styles */
+#wrapper {
+  margin-top: 2rem;
+}
+
+#container {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+#log {
+  margin-top: 5rem;
+  width: 40rem;
+  text-align: center;
+}
+
+#btn {
+  border-radius: 10rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dots {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  opacity: 0.75;
+}
+
+.btn-float {
+  float: left;
+  margin-left: 1rem;
+}
+
+/* Card Styles */
+#card {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(70, 65, 65, 0.5);
+}
+
+.story {
+  font-size: 1.5rem;
+}
+
+#title-card {
+  font-family: 'Courgette', cursive;
+}
+
+#more-action a {
+  color: var(--deep-cove);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+#more-action a:hover {
+  color: #3498db;
+}
+.card-content h5 {
+  font-size: 2.5rem;
+  color: var(--deep-cove);
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-content h3 {
+  font-size: 5rem;
+  color: var(--deep-cove);
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-content p {
+  font-size: 1.5rem;
+  color: var(--deep-cove);
+  font-weight: 100;
+}
+
+#show-card h3 {
+  font-size: 3rem;
+  color: var(--deep-cove);
+  font-weight: semibold;
+  font-family: 'Courgette', cursive;
+}
+
+/* Form Styles */
+#input-wrap label {
+  font-size: 1.3rem;
+}
+
+/* Navbar Styles */
+#nav-title {
+  font-family: 'Courgette', cursive;
+  font-size: 3rem;
+  font-weight: semibold;
+  color: var(--deep-cove);
+}
+
+#hamburger-menu {
+  color: var(--deep-cove);
+}
+
+/* Hero Styles */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('../images/hero-background.jpg') center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.main-heading {
+  color: #fff;
+  line-height: 1;
+  text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: -2rem;
+}
+
+.subtitle {
+  font-size: 3.2rem;
+  font-weight: 300;
+  font-family: 'Courgette', cursive;
+}
+
+/* Stories Style */
+.stories-heading {
+  text-shadow: 1px 1px 1rem rgba(250, 248, 248, 0.5);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Courgette', cursive;
+}
+
+.stories-heading h5 {
+  font-size: 4rem;
+  font-weight: semibold;
+  letter-spacing: 2px;
+  margin: 2.5rem 0;
+}
+
+/* Footer Styles */
+#footer {
+  padding: 2.5rem 0;
+  color: var(--deep-cove);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Courgette', cursive;
+}
+
+.footer-brand {
+  margin-bottom: 2rem;
+}
+
+#footer .paragraph {
+  color: inherit;
+  font-size: 2rem;
+}
+
+.logo-title {
+  color: var(--deep-cove);
+  letter-spacing: 2px;
+}
+
+.social-media {
+  display: flex;
+}
+
+.sm-link {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  border: 2px solid var(--deep-cove);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  transition: background-color 0.5s;
+}
+
+.sm-link:hover {
+  background-color: #0984e3;
+  color: #ecf0f1;
+}

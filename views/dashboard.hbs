@@ -1,0 +1,77 @@
+<main>
+    <div class="hero">
+        <div id="container">
+            <div class="main-heading">
+                <h1 class="title">Discover</h1>
+                <h2 class="subtitle">Story of your life</h2>
+            </div>
+            <a href="#" class="blue lighten-3" id="btn">Make Your Story
+                <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+            </a>
+        </div>
+    </div>
+    <section class="blue lighten-5">
+        <div id="container">
+            <div class="stories-heading">
+                <h5 class="stories-title">My Stories</h5>
+            </div>
+            {{#if stories}}
+            <table class="highlight responsive-table centered">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th span="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each stories}}
+                    <tr>
+                        <td><a href="/stories/{{_id}}">{{title}}</a></td>
+                        <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                        <td><span class="dash-status">{{status}}</span></td>
+                        <td>
+                            <a href="/stories/edit/{{_id}}" class="btn btn-float blue lighten-1"><i class="fas fa-edit"></i></a>
+                            <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button class="btn blue lighten-1" type="submit"><i class="fas fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{else}}
+            <p>You don't make any stories yet</p>
+            {{/if}}
+        </div>
+        <div class="fixed-action-btn">
+            <a href="/stories/add" class="blue lighten-1 btn-floating btn-large waves-effect waves-light "><i class="fas fa-plus"></i></a>
+        </div>
+    </section>
+    <footer class="blue lighten-5" id="footer">
+        <div id="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <h4 class="logo-title">StoryLife</h4>
+                    </a>
+                    <div class="paragraph">
+                        Publish your private and public story
+                    </div>
+                </div>
+                <div class="social-media-wrap">
+                    <h4 class="footer-heading">Follow Me</h4>
+                    <div class="social-media">
+                        <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>

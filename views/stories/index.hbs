@@ -1,0 +1,31 @@
+<main>
+    <div class="stories-heading">
+        <h1>Public Stories</h1>
+    </div>
+    <div class="row">
+        {{#each stories}}
+        <div class="col s12 m4">
+            <div id="card" class="card light-blue lighten-5">
+                <div class="card-image">
+                    {{!-- Pass HTML with handlebard must use triple curlybraces --}}
+                    {{{editIcon user ../user _id}}}
+                </div>
+                <div class="card-content center-align">
+                    <h5>{{title}}</h5>
+                    <p>{{stripTags (truncate body 150)}}</p>
+                    <br>
+                    <div class="chip">
+                        <img src="{{user.image}}" alt="user-image">
+                        <a href="/stories/user/{{user._id}}">{{user.fullName}}</a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a href="/stories/{{_id}}"  class="btn blue lighten-1">Read More</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <p>No public stories</p>
+        {{/each}}
+    </div>
+</main>
